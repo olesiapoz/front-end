@@ -7,7 +7,7 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 variables:
-  imageName: 'front-end:$(build.buildId)'
+  imageName: 'olesiapoz/front-end:$(build.buildId)'
 
 steps:
 - script: |
