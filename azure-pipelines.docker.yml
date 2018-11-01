@@ -24,4 +24,4 @@ steps:
   displayName: 'Push an image'
   inputs:
     command: 'push'
-    imageName: 'olesiapoz/$(imageName)'
+    imageName: '$(imageName)'
