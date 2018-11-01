@@ -13,3 +13,15 @@ steps:
 - script: |
     docker build -f Dockerfile -t $(imageName) .
   displayName: 'docker build'
+
+- task: Docker@1
+  displayName: Login
+  inputs:
+    containerregistrytype: 'Container Registry'
+    dockerRegistryEndpoint: 'Docker-hub'
+    command: login
+- task: Docker@1
+  displayName: 'Push an image'
+  inputs:
+    command: 'push'
+    imageName: 'olesiapoz/$(imageName)'
